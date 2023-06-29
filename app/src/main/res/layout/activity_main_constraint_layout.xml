@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+<!--TODO creat the text view for show the Result-->
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:background="@color/black"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/gl2"
+       />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        />
+<!--    TODO 1 -->
+    <TextView
+        android:id="@+id/tvAC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/roundboder"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="AC"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/gl2"
+        app:layout_constraintEnd_toStartOf="@+id/tvOPenBracket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvS7"
+        />
+    <TextView
+        android:id="@+id/tvOPenBracket"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/roundboder"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="("
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/tvS8"
+        app:layout_constraintEnd_toStartOf="@+id/tvCloseBracket"
+        app:layout_constraintStart_toEndOf="@id/tvAC"
+        app:layout_constraintTop_toBottomOf="@id/gl2" />
+    <TextView
+        android:id="@+id/tvCloseBracket"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/roundboder"
+        android:layout_margin="8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:gravity="center"
+        android:text=")"
+        app:layout_constraintBottom_toTopOf="@+id/tvS9"
+        app:layout_constraintEnd_toStartOf="@+id/tvDIVISION"
+        app:layout_constraintStart_toEndOf="@id/tvOPenBracket"
+        app:layout_constraintTop_toBottomOf="@id/gl2" />
+
+    <TextView
+        android:id="@+id/tvDIVISION"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/roundboder"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="/"
+        android:textStyle="bold"
+        android:textColor="#151414"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/tvSAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCloseBracket"
+        app:layout_constraintTop_toBottomOf="@id/gl2" />
+
+ <TextView
+     android:id="@+id/tvS7"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     app:layout_constraintDimensionRatio="1:1"
+     android:text="7"
+     app:layout_constraintBottom_toTopOf="@+id/tvS4"
+     app:layout_constraintEnd_toStartOf="@+id/tvS8"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/tvAC" />
+ <TextView
+     android:id="@+id/tvS8"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     app:layout_constraintDimensionRatio="1:1"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="8"
+     app:layout_constraintBottom_toTopOf="@+id/tvS5"
+     app:layout_constraintEnd_toStartOf="@+id/tvS9"
+     app:layout_constraintStart_toEndOf="@id/tvS7"
+     app:layout_constraintTop_toBottomOf="@id/tvOPenBracket" />
+
+ <TextView
+     android:id="@+id/tvS9"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     app:layout_constraintDimensionRatio="1:1"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="9"
+     app:layout_constraintBottom_toTopOf="@+id/tvS6"
+     app:layout_constraintEnd_toStartOf="@+id/tvSAdd"
+     app:layout_constraintStart_toEndOf="@id/tvS8"
+     app:layout_constraintTop_toBottomOf="@id/tvCloseBracket" />
+ <TextView
+     android:id="@+id/tvSAdd"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     app:layout_constraintDimensionRatio="1:1"
+     android:gravity="center"
+     android:text="+"
+     android:textStyle="bold"
+     app:layout_constraintBottom_toTopOf="@+id/tvsSubstarct"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@id/tvS9"
+     app:layout_constraintTop_toBottomOf="@id/tvDIVISION" />
+
+ <TextView
+     android:id="@+id/tvS4"
+     android:layout_width="0dp"
+     app:layout_constraintDimensionRatio="1:1"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="4"
+     app:layout_constraintBottom_toTopOf="@+id/tvS1"
+     app:layout_constraintEnd_toStartOf="@+id/tvS5"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/tvS7" />
+ <TextView
+     android:id="@+id/tvS5"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="5"
+     app:layout_constraintBottom_toTopOf="@+id/tvS2"
+     app:layout_constraintEnd_toStartOf="@+id/tvS6"
+     app:layout_constraintDimensionRatio="1:1"
+     app:layout_constraintStart_toEndOf="@id/tvS4"
+     app:layout_constraintTop_toBottomOf="@id/tvS8" />
+ <TextView
+     android:id="@+id/tvS6"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="6"
+     app:layout_constraintDimensionRatio="1:1"
+     app:layout_constraintBottom_toTopOf="@+id/tvS3"
+     app:layout_constraintEnd_toStartOf="@+id/tvsSubstarct"
+     app:layout_constraintStart_toEndOf="@id/tvS5"
+     app:layout_constraintTop_toBottomOf="@id/tvS9" />
+ <TextView
+     android:id="@+id/tvsSubstarct"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="-"
+     android:textStyle="bold"
+     app:layout_constraintBottom_toTopOf="@+id/tvSmulti"
+     app:layout_constraintDimensionRatio="1:1"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@id/tvS6"
+     app:layout_constraintTop_toBottomOf="@id/tvSAdd" />
+
+ <TextView
+     android:id="@+id/tvS1"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="1"
+     app:layout_constraintBottom_toTopOf="@+id/tvS0"
+     app:layout_constraintEnd_toStartOf="@+id/tvS2"
+     app:layout_constraintDimensionRatio="1:1"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/tvS4" />
+
+ <TextView
+     android:id="@+id/tvS2"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="2"
+     app:layout_constraintDimensionRatio="1:1"
+     app:layout_constraintBottom_toTopOf="@+id/tvSpoint"
+     app:layout_constraintEnd_toStartOf="@+id/tvS3"
+     app:layout_constraintStart_toEndOf="@id/tvS1"
+     app:layout_constraintTop_toBottomOf="@id/tvS5" />
+ <TextView
+     android:id="@+id/tvS3"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     app:layout_constraintDimensionRatio="1:1"
+     android:gravity="center"
+     android:text="3"
+     app:layout_constraintBottom_toTopOf="@+id/tvBack"
+     app:layout_constraintEnd_toStartOf="@+id/tvSmulti"
+     app:layout_constraintStart_toEndOf="@id/tvS2"
+     app:layout_constraintTop_toBottomOf="@id/tvS6" />
+ <TextView
+     android:id="@+id/tvSmulti"
+     android:layout_width="0dp"
+     app:layout_constraintDimensionRatio="1:1"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="*"
+     android:textStyle="bold"
+     app:layout_constraintBottom_toTopOf="@+id/Equals"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@id/tvS3"
+     app:layout_constraintTop_toBottomOf="@id/tvsSubstarct" />
+ <TextView
+     android:id="@+id/tvS0"
+     android:layout_width="0dp"
+     app:layout_constraintDimensionRatio="1:1"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="0"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/tvSpoint"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/tvS1" />
+ <TextView
+     android:id="@+id/tvSpoint"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     android:text="."
+     android:textSize="32sp"
+     app:layout_constraintDimensionRatio="1:1"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/tvBack"
+     app:layout_constraintStart_toEndOf="@id/tvS0"
+     app:layout_constraintTop_toBottomOf="@id/tvS2" />
+ <TextView
+     android:id="@+id/tvBack"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     app:layout_constraintDimensionRatio="1:1"
+     android:text="Bspc"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/Equals"
+     app:layout_constraintStart_toEndOf="@id/tvSpoint"
+     app:layout_constraintTop_toBottomOf="@id/tvS3" />
+
+ <TextView
+     android:id="@+id/Equals"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     android:background="@drawable/roundboder"
+     android:layout_margin="8dp"
+     android:gravity="center"
+     app:layout_constraintDimensionRatio="1:1"
+     android:text="="
+     android:textStyle="bold"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@id/tvBack"
+     app:layout_constraintTop_toBottomOf="@id/tvSmulti" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

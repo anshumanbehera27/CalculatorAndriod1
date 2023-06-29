@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--TODO 1: Add a text field that display the result -->
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:gravity="bottom|end"
+        android:padding="16dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+
+        />
+<!--guid line is the referance point for any  paticulat point of the
+  we will use when we want to fill some of the portation of the view -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <!-- TODO: addd all the buttons     -->
+<!--
+NOTES
+suition - for equidistance to greather arrange in the same space
+use -   weight = 1
+sutition - fill the 30% of the paticular view
+use- Guid line  which is used as a referance
+
+
+
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+
+        <TextView
+            android:id="@+id/tvAc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/roundboder"
+            android:layout_margin="8dp"
+            android:textColor="@color/text"
+
+            android:layout_weight="1"
+            android:text="AC"
+            />
+        <TextView
+            android:id="@+id/tvOpenBracket"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/roundboder"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:text="("
+            />
+        <TextView
+            android:id="@+id/CloseBracket"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/roundboder"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:text=")"
+            />
+        <TextView
+            android:id="@+id/tvdivid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/roundboder"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:text="/"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tvS9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="7"
+                />
+            <TextView
+                android:id="@+id/tvSAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="8"
+                />
+            <TextView
+                android:id="@+id/tvS4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="9"
+                />
+            <TextView
+                android:id="@+id/tvMultiply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="*"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                />
+
+        </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+             android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tvDIVISION"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="4"
+                />
+            <TextView
+                android:id="@+id/tvS7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/text"
+                android:text="5"
+                />
+            <TextView
+                android:id="@+id/tvS8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="6"
+                />
+            <TextView
+                android:id="@+id/tvSubstraction"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/text"
+                android:text="-"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                />
+
+        </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+           android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tvAC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:textColor="@color/text"
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="1"
+                />
+            <TextView
+                android:id="@+id/tvOPenBracket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:textColor="@color/text"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="2"
+                />
+            <TextView
+                android:id="@+id/tvCloseBracket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/text"
+                android:text="3"
+                />
+            <TextView
+                android:id="@+id/tvSum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="+"
+                />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+        android:layout_weight="1"
+
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tv0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="0"
+                />
+            <TextView
+                android:id="@+id/tvDecimal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="."
+                android:textSize="23dp"
+                />
+            <TextView
+                android:id="@+id/tvBackSpace"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="Bspc"
+                />
+            <TextView
+                android:id="@+id/tvEquals"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundboder"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:layout_weight="1"
+                android:text="="
+                android:textSize="23dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <!-- TODO: add all the functionalities   -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
